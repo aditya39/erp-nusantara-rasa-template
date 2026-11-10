@@ -98,5 +98,5 @@ try:
 except Exception:  # noqa: BLE001
     lapor("•", f"ERP belum berjalan di {config.ERP_URL} (jalankan: python -m server)")
 
-print("\nSemua siap. Lanjut: python -m server, lalu buka http://localhost:8080" if not masalah else f"\n{masalah} hal perlu dibereskan dulu.")
+print(f"\nSemua siap. Lanjut: python -m server, lalu buka {config.ERP_URL}" if not masalah else f"\n{masalah} hal perlu dibereskan dulu.")
 sys.exit(1 if masalah else 0)
