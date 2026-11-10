@@ -7,7 +7,7 @@ Panduan untuk coding agent (Claude Code, Codex, dll.) dan developer yang membang
 ERP PT Nusantara Rasa (perusahaan fiktif, data dummy). Aplikasinya sudah lengkap dan berjalan tanpa AI:
 penjualan, sales order, keuangan, persediaan, produksi & HPP, dokumen, pengguna & hak akses, log aktivitas.
 Panel Asisten dan tombol "Tanya Asisten" di layar juga sudah ada, tetapi **otaknya belum**: paket `asisten/`
-baru berisi rintisan. Fitur AI dibangun bertahap oleh peserta workshop. Setiap tahap punya kartu di `kartu/`
+baru berisi rintisan. Fitur AI dibangun bertahap oleh peserta workshop. Setiap tahap punya task di `tasks/`
 dan tes penerimaan di `tests/`.
 
 - Backend: Python 3.10+, FastAPI (`server/`). Frontend: Angular 21 + PrimeNG (`frontend/`), sudah di-build ke `frontend/dist/`.
@@ -28,7 +28,7 @@ Kartu draft SO di panel ──► /api/sales-order/simulasi dan /api/sales-order
 ## Cara kerja di proyek ini
 
 1. Kerjakan **satu tahap** yang diminta user. Jangan mengerjakan tahap berikutnya walau tesnya sudah ada.
-2. Baca kartu tahap itu (`kartu/<tahap>-*.md`) dan tesnya (`tests/test_tahap<tahap>.py`) sebelum menulis kode.
+2. Baca task tahap itu (`tasks/<tahap>-*.md`) dan tesnya (`tests/test_tahap<tahap>.py`) sebelum menulis kode.
 3. Selesai berarti tes tahap itu lulus **dan** tes tahap sebelumnya tetap lulus: `python scripts/cek_tahap.py`.
 4. Setelah selesai, jelaskan singkat ke user apa yang berubah dan di file mana, supaya mereka bisa membaca kodenya.
 5. Tulis kode dan komentar dalam bahasa Indonesia, mengikuti gaya file yang sudah ada.

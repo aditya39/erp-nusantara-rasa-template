@@ -11,7 +11,7 @@ Isi `RAG_KOLEKSI` di `.env` dengan nama kalian (huruf kecil, tanpa spasi), misal
 ## Prompt untuk Claude Code
 
 ```
-Kerjakan Tahap 4 (kartu/4-rag.md). Ikuti AGENTS.md.
+Kerjakan Tahap 4 (tasks/4-rag.md). Ikuti AGENTS.md.
 
 1. Buat asisten/rag.py:
    - potong_dokumen(path) -> list[dict]: potong file Markdown per heading "##". Bagian yang lebih

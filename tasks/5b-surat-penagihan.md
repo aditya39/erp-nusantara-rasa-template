@@ -8,7 +8,7 @@
 ## Prompt untuk Claude Code
 
 ```
-Kerjakan Tahap 5B (kartu/5b-surat-penagihan.md). Ikuti AGENTS.md.
+Kerjakan Tahap 5B (tasks/5b-surat-penagihan.md). Ikuti AGENTS.md.
 
 1. Tambahkan tool piutang_customer(customer: str) di asisten/tools_tambahan.py, izin "piutang":
    rincian faktur belum lunas milik SATU customer (nomor_faktur, tanggal, jatuh_tempo, sisa,

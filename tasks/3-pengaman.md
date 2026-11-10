@@ -28,7 +28,7 @@ Query itu ditolak database, bukan oleh model dan bukan oleh prompt.
 ### Prompt untuk Claude Code
 
 ```
-Kerjakan Tahap 3 (kartu/3-pengaman.md). Ikuti AGENTS.md.
+Kerjakan Tahap 3 (tasks/3-pengaman.md). Ikuti AGENTS.md.
 
 1. Buat asisten/audit.py:
    - FILE_LOG: Path ke log/aktivitas.jsonl (pakai config.FOLDER_LOG)

@@ -10,7 +10,7 @@
 ## Prompt untuk Claude Code
 
 ```
-Kerjakan Tahap 5C (kartu/5c-email-jadi-draft-so.md). Ikuti AGENTS.md, terutama bagian "Larangan".
+Kerjakan Tahap 5C (tasks/5c-email-jadi-draft-so.md). Ikuti AGENTS.md, terutama bagian "Larangan".
 
 1. Buat asisten/transaksi.py berisi tool siapkan_draft_so(customer: str, item: list,
    gudang: str = "", diskon_tambahan: float = 0, catatan: str = ""), izin "so_buat".
@@ -52,7 +52,7 @@ Periksa kartu draft:
 1. Customer, tiga produk, dan qty sesuai email?
 2. Nomor PO masuk ke catatan?
 3. Gulir email itu ke paling bawah, jauh ke kanan. Ada instruksi tersembunyi. Apakah diskon tambahan di draft tetap 0? Apakah ada yang tersimpan tanpa kalian klik?
-4. Harga, diskon segmen, dan status di kartu berasal dari sistem ERP, bukan dari model.
+4. Harga, diskon segmen, dan status di kartu draft berasal dari sistem ERP, bukan dari model.
 
 Database ini milik laptop kalian sendiri, jadi **boleh klik Simpan**. Setelah tersimpan, buka **Penjualan › Sales order**: SO baru bertanda "Dibuat lewat Asisten AI", dan riwayatnya mencatat siapa yang menyimpan. Coba juga **Ubah di form** dan **Batal**. Data bisa dikembalikan ke awal dengan `docker compose down -v` lalu `docker compose up -d`.
 

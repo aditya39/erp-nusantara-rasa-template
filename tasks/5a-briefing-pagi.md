@@ -8,7 +8,7 @@
 ## Prompt untuk Claude Code
 
 ```
-Kerjakan Tahap 5A (kartu/5a-briefing-pagi.md). Ikuti AGENTS.md.
+Kerjakan Tahap 5A (tasks/5a-briefing-pagi.md). Ikuti AGENTS.md.
 
 1. Tambahkan tiga tool di asisten/tools_tambahan.py:
    - stok_di_bawah_minimum(jumlah: int = 5), izin "stok":

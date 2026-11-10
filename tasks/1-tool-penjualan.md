@@ -7,7 +7,7 @@ Tool adalah fungsi biasa ditambah keterangan untuk model: nama, deskripsi, dan p
 ## Prompt untuk Claude Code
 
 ```
-Kerjakan Tahap 1 (kartu/1-tool-penjualan.md). Ikuti AGENTS.md.
+Kerjakan Tahap 1 (tasks/1-tool-penjualan.md). Ikuti AGENTS.md.
 
 Tambahkan dua tool di asisten/tools.py, meniru pola cari_produk:
 

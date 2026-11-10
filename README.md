@@ -96,17 +96,17 @@ Login dengan salah satu akun di bawah (password semua `demo123`). Klik **Asisten
 
 ## Tahap
 
-Buka Claude Code di folder ini (`claude`), lalu ikuti kartu secara berurutan. Setiap kartu berisi prompt yang bisa
+Buka Claude Code di folder ini (`claude`), lalu ikuti task secara berurutan. Setiap task berisi prompt yang bisa
 disalin, cara mengecek hasil, dan hal yang perlu kalian pahami dari kode yang ditulis Claude Code.
 
-| Tahap | Kartu | Yang terlihat di ERP setelah selesai |
+| Tahap | Task | Yang terlihat di ERP setelah selesai |
 |---|---|---|
-| 0 | `kartu/0-kenali-template.md` | ERP berjalan. Asisten menjawab tanpa data |
-| 1 | `kartu/1-tool-penjualan.md` | Model meminta tool yang benar, tetapi belum ada yang menjalankannya |
-| 2 | `kartu/2-agent-loop.md` | Asisten menjawab dari data. Tombol **Telusuri penyebab** di Analisis HPP bekerja |
-| 3 | `kartu/3-pengaman.md` | User tanpa izin ditolak oleh kode. Setiap pertanyaan tercatat |
-| 4 | `kartu/4-rag.md` | Asisten menjawab aturan dari dokumen SOP dan menyebut sumbernya |
-| 5 | `kartu/5a-briefing-pagi.md`, `5b-surat-penagihan.md`, `5c-email-jadi-draft-so.md` | Satu fitur pilihan: briefing pagi, draft surat penagihan, atau email pesanan menjadi draft sales order |
+| 0 | `tasks/0-kenali-template.md` | ERP berjalan. Asisten menjawab tanpa data |
+| 1 | `tasks/1-tool-penjualan.md` | Model meminta tool yang benar, tetapi belum ada yang menjalankannya |
+| 2 | `tasks/2-agent-loop.md` | Asisten menjawab dari data. Tombol **Telusuri penyebab** di Analisis HPP bekerja |
+| 3 | `tasks/3-pengaman.md` | User tanpa izin ditolak oleh kode. Setiap pertanyaan tercatat |
+| 4 | `tasks/4-rag.md` | Asisten menjawab aturan dari dokumen SOP dan menyebut sumbernya |
+| 5 | `tasks/5a-briefing-pagi.md`, `5b-surat-penagihan.md`, `5c-email-jadi-draft-so.md` | Satu fitur pilihan: briefing pagi, draft surat penagihan, atau email pesanan menjadi draft sales order |
 
 Papan status: `python scripts/cek_tahap.py`. Kode Python berubah? Jalankan ulang server (`Ctrl+C`, lalu `python -m server`).
 
@@ -173,4 +173,4 @@ ada di `frontend/src/app/pages/produksi/hpp.ts` (tombol "Telusuri penyebab").
 | `db/init/` | schema, data dummy, view `ai`, role (dipakai `docker compose`) |
 | `dokumen/` | SOP dan kebijakan (menu SOP & Kebijakan, sumber RAG) |
 | `dokumen-uji/` | email PO dan dokumen uji untuk Tahap 4 dan fitur C |
-| `kartu/`, `tests/`, `scripts/` | kartu tahap, tes penerimaan, papan status, pemasang kunci |
+| `tasks/`, `tests/`, `scripts/` | task tahap, tes penerimaan, papan status, pemasang kunci |

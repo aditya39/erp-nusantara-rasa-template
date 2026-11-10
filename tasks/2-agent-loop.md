@@ -7,7 +7,7 @@ Agent loop: model meminta tool → kode menjalankan → hasil dikirim balik ke m
 ## Prompt untuk Claude Code
 
 ```
-Kerjakan Tahap 2 (kartu/2-agent-loop.md). Ikuti AGENTS.md, terutama bagian
+Kerjakan Tahap 2 (tasks/2-agent-loop.md). Ikuti AGENTS.md, terutama bagian
 "Kontrak agent" dan "Pengaman".
 
 1. Ganti rintisan jalankan() di asisten/agent.py dengan agent loop. Pakai
