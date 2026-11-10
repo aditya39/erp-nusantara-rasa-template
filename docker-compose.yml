@@ -1,0 +1,25 @@
+# Database lokal untuk mencoba template di laptop sendiri (PostgreSQL 17 + pgvector).
+#   docker compose up -d      -> database di localhost:5433, data dummy dibuat otomatis dari db/init
+#   docker compose down       -> berhenti (data tetap)
+#   docker compose down -v    -> berhenti dan hapus data (dibuat ulang saat "up")
+# Pertama kali: unduh image ±450 MB dan pengisian data beberapa puluh detik. Cek siap: docker compose ps (healthy).
+name: erp-nusantara-rasa
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: erp
+      POSTGRES_USER: erp_admin
+      POSTGRES_PASSWORD: admin_workshop
+    ports:
+      # Hanya laptop ini. Ganti port bila 5433 sudah dipakai: DB_PORT=5434 docker compose up -d
+      - "127.0.0.1:${DB_PORT:-5433}:5432"
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+      - erp-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U erp_admin -d erp"]
+      interval: 5s
+      retries: 30
+volumes:
+  erp-data:

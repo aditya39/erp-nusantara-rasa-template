@@ -1,0 +1,2 @@
+function i(e){if(e==null)return"";let n=typeof e=="number"?String(e).replace(".",","):e;return/[;"\n]/.test(n)?`"${n.replace(/"/g,'""')}"`:n}function u(e,n,o){let l=[n.map(r=>i(r.label)).join(";"),...o.map(r=>n.map(c=>i(c.nilai(r))).join(";"))].join(`\r
+`),s=new Blob(["\uFEFF"+l],{type:"text/csv;charset=utf-8"}),t=document.createElement("a");t.href=URL.createObjectURL(s),t.download=`${e}.csv`,t.click(),setTimeout(()=>URL.revokeObjectURL(t.href),1e3)}export{u as a};
