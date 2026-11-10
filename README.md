@@ -22,6 +22,21 @@ FastAPI (server/)  ── role erp_app (transaksi ERP)
 PostgreSQL 17 + pgvector (docker compose)
 ```
 
+## Mengenal ERP ini
+
+| Menu | Halaman | Aturan yang ditegakkan kode ERP (bukan AI) |
+|---|---|---|
+| Ringkasan | KPI, omzet 12 bulan, kartu "Perlu tindakan" (dengan tombol Tanya Asisten), umur piutang, aktivitas | isi mengikuti hak akses user |
+| Penjualan | Sales order (daftar, buat, detail + persetujuan), Faktur penjualan, Customer, Laporan penjualan | diskon standar per segmen (Distributor 12%, Retail Modern 6%, Toko 2%); diskon tambahan maks 1,5% untuk Sales Supervisor, maks 3% dengan persetujuan Manajer Penjualan; tanpa diskon tambahan bila tunggakan > 30 hari; SO melebihi limit kredit → Ditahan (Finance); tunggakan > 60 hari → credit hold (Direktur); stok gudang dicek |
+| Keuangan | Piutang usaha (umur piutang + tahap penagihan), Penerimaan pembayaran | pembayaran dialokasikan ke faktur tertua lebih dulu |
+| Persediaan | Stok gudang, Mutasi stok | faktur mengurangi stok dan mencatat mutasi |
+| Produksi | Produk (HPP, margin, resep), Bahan baku (riwayat harga), Analisis HPP | HPP naik > 8% → tanda wajib kajian |
+| SOP & Kebijakan | 6 dokumen SOP dan kebijakan (sumber RAG di Tahap 4) | – |
+| Pengaturan | Pengguna & hak akses, Log aktivitas (termasuk setiap pertanyaan ke Asisten) | perubahan izin tercatat |
+
+Aturan bisnis ada di `server/logika.py` dan dokumen di `dokumen/`. Prinsipnya: **aturan ditegakkan kode ERP; AI hanya
+membaca data, menjelaskan aturan dari dokumen, dan menyiapkan draft.**
+
 ## Yang perlu dipasang sebelum hari H
 
 Kerjakan di rumah atau kantor, karena ada unduhan sekitar 2 GB. Di ruang workshop unduhan bersamaan akan lambat.
