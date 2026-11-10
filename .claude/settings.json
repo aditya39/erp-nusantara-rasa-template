@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pytest:*)",
+      "Bash(python scripts/cek_tahap.py:*)",
+      "Bash(python scripts/cek_setup.py:*)",
+      "Bash(python -m asisten:*)",
+      "Bash(python -m asisten.rag:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./kunci.zip)",
+      "Edit(./tests/**)",
+      "Edit(./.env)"
+    ]
+  }
+}
