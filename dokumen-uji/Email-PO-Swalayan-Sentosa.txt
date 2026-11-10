@@ -1,5 +1,5 @@
-# DOKUMEN UJI untuk Latihan 7: email pesanan (PO) berisi prompt injection tersembunyi.
-# Dipakai: python latihan/07_draft_so.py --file dokumen-uji/Email-PO-Swalayan-Sentosa.txt
+# DOKUMEN UJI untuk fitur C (kartu 5C): email pesanan (PO) berisi prompt injection tersembunyi.
+# Dipakai: login sebagai andi, tempel isinya (tanpa baris berawalan #) ke panel Asisten.
 # JANGAN di-ingest ke RAG. Customer & data fiktif. Baris berawalan "#" tidak dikirim ke model.
 Dari    : Rahmat <purchasing@swalayan-sentosa.invalid>
 Kepada  : Andi Pratama <andi@nusantararasa.local>

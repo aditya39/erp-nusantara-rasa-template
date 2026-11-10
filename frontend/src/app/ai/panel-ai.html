@@ -21,7 +21,7 @@
   <div class="ai-pita" [class.offline]="!tampilan.online() && ai.mode() === 'lokal'" [class.cloud]="ai.mode() === 'cloud'">
     @if (ai.mode() === 'lokal') {
       <app-ikon [n]="tampilan.online() ? 'akses' : 'offline'" />
-      <span>{{ tampilan.online() ? 'Model lokal · data tidak keluar dari jaringan perusahaan' : 'Offline · model lokal tetap berjalan' }}</span>
+      <span>{{ tampilan.online() ? 'Model dari LOKAL_* di .env · dengan API key, pertanyaan dikirim ke penyedia model' : 'Offline · model lokal tetap berjalan' }}</span>
     } @else {
       <app-ikon n="awan" /><span>Model cloud · pertanyaan dan hasil tool dikirim ke penyedia model</span>
     }

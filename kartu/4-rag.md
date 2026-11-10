@@ -6,7 +6,7 @@ Data transaksi dijawab dengan tool dan query. Aturan dan prosedur ada di dokumen
 
 ## Sebelum mulai
 
-Isi `RAG_KOLEKSI` di `.env` dengan nama unik untuk pasangan kalian (huruf kecil, tanpa spasi), misalnya `budi_sari`. Kalau baris `RAG_KOLEKSI=` muncul dua kali di `.env`, yang terbaca adalah yang paling bawah. Setiap pasangan punya tabelnya sendiri: `latihan.dokumen_<nama>`.
+Isi `RAG_KOLEKSI` di `.env` dengan nama kalian (huruf kecil, tanpa spasi), misalnya `budi`. Kalau baris `RAG_KOLEKSI=` muncul dua kali di `.env`, yang terbaca adalah yang paling bawah. Koleksinya disimpan di database laptop kalian sendiri, di tabel `latihan.dokumen_<nama>`.
 
 ## Prompt untuk Claude Code
 

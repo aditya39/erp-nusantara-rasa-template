@@ -37,6 +37,6 @@ Periksa suratnya:
 
 ## Siapkan untuk ditunjukkan (2 menit)
 
-1. Klik tombolnya di depan kelas, buka langkah agent.
+1. Kirim pertanyaannya di depan kelas, buka langkah agent.
 2. Satu kalimat: berapa lama pekerjaan ini kalau dikerjakan manual di klien kalian?
 3. Satu hal yang masih kurang sebelum fitur ini layak dirilis.
